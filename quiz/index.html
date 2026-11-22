@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+    content="Zúčastněte se kvízu o hře Beyond All Reason a testujte své znalosti. Zjistěte, jak dobře znáte herní engine, vydání hry a další zajímavosti.">
+  <title>Beyond All Reason - Kvíz</title>
+  <link rel="icon" type="image/x-icon" href="../gallery/1ad4d9ade5753e59e9bc0343ec2b2cb1.png">
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/menu.js" defer></script>
+  <script src="../js/quiz.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="navbar-inner">
+        <a class="navbar-brand" href="../index.html">BAR</a>
+        <button class="nav-toggler" type="button" aria-controls="navbarNav" aria-expanded="false"
+          aria-label="Zobrazit menu">
+          <span class="nav-toggler-icon"></span>
+        </button>
+        <div class="nav-menu" id="navbarNav">
+          <ul class="nav-list">
+            <li><a class="nav-link" href="../index.html">Domů</a></li>
+            <li><a class="nav-link" href="../gallery/index.html">Galerie</a></li>
+            <li><a class="nav-link" href="../quiz/index.html">Kvíz</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="page-main">
+    <h1 class="title-xl">BAR Quiz</h1>
+    <hr>
+    <form id="quiz-form" novalidate>
+
+      <!-- Otázka 1 -->
+      <p class="msg msg-info question" data-q="1">1. Jak se jmenuje engine, na kterém BAR běží?</p>
+      <div class="q-row">
+        <label for="otazka1" class="q-label pb-lg">Název enginu</label>
+        <div class="q-field">
+          <input type="text" class="input" id="otazka1" name="otazka1" placeholder="Zadej název enginu" required>
+        </div>
+      </div>
+      <p class="msg msg-success answer" hidden>Správná odpověď: <b>Spring game engine</b></p>
+
+      <!-- Otázka 2 -->
+      <p class="msg msg-info question" data-q="2">2. Kdy byl vydán BAR?</p>
+      <div class="q-row">
+        <label for="otazka2" class="q-label pb-lg">Rok:</label>
+        <div class="q-field">
+          <input type="number" class="input" id="otazka2" name="otazka2" placeholder="Zadej rok" value="2015"
+            max="2023" min="2010" step="1" required>
+        </div>
+      </div>
+      <p class="msg msg-success answer" hidden>Správná odpověď: <b>2018</b></p>
+
+      <!-- Otázka 3 -->
+      <p class="msg msg-info question" data-q="3">3. Co sem nepatří?</p>
+      <div class="q-row" role="radiogroup" aria-labelledby="popisek3">
+        <span class="q-label pt-0" id="popisek3">Vyber co zde nepatří:</span>
+        <div class="q-field">
+          <div class="check">
+            <input type="radio" name="otazka3" id="otazka3a" value="armada" required>
+            <label for="otazka3a">Armada</label>
+          </div>
+          <div class="check">
+            <input type="radio" name="otazka3" id="otazka3b" value="komando" required>
+            <label for="otazka3b">Komando</label>
+          </div>
+          <div class="check">
+            <input type="radio" name="otazka3" id="otazka3c" value="cortex" required>
+            <label for="otazka3c" class="pb-3">Cortex</label>
+          </div>
+        </div>
+      </div>
+      <p class="msg msg-success answer" hidden>Správná odpověď: <b>Komando</b></p>
+
+      <!-- Otázka 4 -->
+      <p class="msg msg-info question" data-q="4">4. Je aktuálně BAR ve službě Steam?</p>
+      <div class="q-row" role="radiogroup" aria-labelledby="popisek4">
+        <span class="q-label" id="popisek4">Vyber správnou odpověď:</span>
+        <div class="q-field">
+          <div class="check">
+            <input type="radio" name="otazka4" id="otazka4a" value="Ano" required>
+            <label for="otazka4a">Ano</label>
+          </div>
+          <div class="check">
+            <input type="radio" name="otazka4" id="otazka4b" value="Ne" required>
+            <label for="otazka4b">Ne</label>
+          </div>
+        </div>
+      </div>
+      <p class="msg msg-success answer" hidden>Správná odpověď: <b>Ne</b></p>
+
+      <div id="result" role="status" hidden></div>
+
+      <div class="quiz-buttons">
+        <button type="submit" class="button button-blue">Vyhodnotit kvíz</button>
+        <button type="button" class="button button-blue" id="show-answers">Zobrazit správné odpovědi</button>
+      </div>
+    </form>
+    <hr>
+  </main>
+
+  <footer class="footer-fixed">
+    <p>2026 - Matyáš Bezděk</p>
+  </footer>
+</body>
+
+</html>
